@@ -1,0 +1,13 @@
+3fe1483e8c2f06b2feb48550916f3e39 *DESCRIPTION
+096fe912be5fdbf52fdd8a0fb6a42de8 *NAMESPACE
+3c68cf4a3f544641e6bcd9efd71ca5c7 *R/RcppExports.R
+d8b85e2ecccae5e6d6b8bf96e6068fef *R/helper.R
+9995783fcce4f7b5d32f7844ae760b1b *R/method.R
+a01111a3cb2fb72d0137810e1937de9a *R/rpart.LAD.R
+7325b6bfb80a92c5d2ee467a71f52b65 *man/LAD.Rd
+ba781488dde6579784dffcd0d8239a8c *man/rpart.LAD.Rd
+59d6b4c71b608618adf173c49736e968 *src/LADsplit.cpp
+e2d347f9ad519d45dd6bcf3703472671 *src/Makevars
+c968fc7ae5843ebb041aca826bda7127 *src/RcppExports.cpp
+4202d042a071d50ccab011cc9d1dc1b2 *src/helper.cpp
+11891e6d247e5f31320b9a134c71628d *tests/test.R
