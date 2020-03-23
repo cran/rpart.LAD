@@ -1,6 +1,8 @@
 #include <Rcpp.h>
 #include <vector>
-#include <omp.h>
+#ifdef _OPENMP
+# include <omp.h>
+#endif
 
 using namespace Rcpp;
 using namespace std;
@@ -115,6 +117,7 @@ Rcpp::NumericVector getGoodnessOMP(Rcpp::NumericVector const& x,
   Rcpp::NumericVector splits(n-1);
 
   double tmpsum = 0;
+
   #pragma omp parallel for reduction(+:tmpsum)
   for(int j=0; j<n; j++) tmpsum += wt[j];
 
