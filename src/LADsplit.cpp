@@ -49,11 +49,11 @@ int getMedian(vector<double> const& weights) {
 
 // [[Rcpp::export]]
 Rcpp::NumericVector getMedians(Rcpp::NumericVector const& x, Rcpp::NumericVector const& wt, Rcpp::IntegerVector const& idx) {
-  int n = LENGTH(x);
+  long n = LENGTH(x);
   int layers = (int)ceil(log2(n));
-  if (layers > 15) Rcpp::stop("Fehler, zu viele Layer");
+  if (layers >= (int)sizeof(int) * CHAR_BIT) Rcpp::stop("error, too many layers: n too large for integer range on your machine");
   int n2 = exp2(layers);
-  if (n2 < n) Rcpp::stop("Fehler n2 < n");
+  if (n2 < n) Rcpp::stop("error n2 < n");
   std::vector<double> weights(2*n2-1, 0);
   std::vector<double> weights2(2*n2-1, 0);
 

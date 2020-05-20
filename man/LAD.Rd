@@ -4,7 +4,9 @@
 \name{LAD}
 \alias{LAD}
 \title{'rpart'-method: List of required functions for inducing 'rpart'-like LAD regression trees}
-\format{An object of class \code{list} of length 4.}
+\format{
+An object of class \code{list} of length 4.
+}
 \usage{
 LAD
 }
