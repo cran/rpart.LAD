@@ -13,14 +13,14 @@ iLAD <- function(y, offset, parms, wt) {
   list(y = c(y), parms = NULL, numresp = 1, numy = 1, summary = sfun)
 }
 
-#eval
+# eval
 eLAD <- function(y, wt, parms) {
   wmed <- wmedian(y, wt)
   rt <- sum(wt * abs(y - wmed))
   list(label = wmed, deviance = rt)
 }
 
-#split
+# split
 sLAD <- function(y, wt, x, parms, continuous) {
   n <- length(y)
 
@@ -73,7 +73,7 @@ sLAD <- function(y, wt, x, parms, continuous) {
 }
 
 # text
-tLAD <- function (yval, dev, wt, ylevel, digits, n, use.n) {
+tLAD <- function(yval, dev, wt, ylevel, digits, n, use.n) {
   if (use.n)
     paste0(formatg(yval, digits), "\nn=", n)
   else formatg(yval, digits)
@@ -81,7 +81,9 @@ tLAD <- function (yval, dev, wt, ylevel, digits, n, use.n) {
 
 
 #' 'rpart'-method: List of required functions for inducing 'rpart'-like LAD regression trees
+#' 
 #' @export
+#' 
 #' @examples
 #'   mystate <- data.frame(state.x77, region = state.region)
 #'   names(mystate) <- casefold(names(mystate)) #remove mixed case

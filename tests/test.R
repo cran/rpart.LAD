@@ -29,7 +29,3 @@ xerror1b <- colMeans
 #plot(fit3)
 #text(fit3)
 # unfortunately, it does not reproduce the plot entirely... reasons?
-
-#LAD fit large
-#mystate2 <- do.call(rbind, lapply(1:3000, function(i) mystate))
-#print(system.time(fit1 <- rpart(murder ~ ., data = mystate2, method = LAD, minsplit = 10)))
